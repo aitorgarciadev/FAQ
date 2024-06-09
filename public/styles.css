@@ -1,0 +1,71 @@
+main {
+  background-color: rgb(255, 255, 255);
+}
+
+p {
+  font-size: 20px;
+}
+
+div {
+  max-width: 500px;
+}
+
+section {
+  display: flexbox;
+  padding-left: 2em;
+  padding-top: 2em;
+}
+
+header {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+aside {
+  background-color: #c2c2c2;
+  justify-content: center;
+  align-items: start;
+  color: rgb(175, 175, 175);
+}
+
+.btn {
+  display: inline-block;
+  width: 125px;
+  text-align: center;
+  background: #000000;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  margin: 0.5em 1em;
+}
+
+body {
+  margin: 0;
+  display: grid;
+
+  grid-template:
+    "header" 70px
+    "aside" 200px
+    "main" auto;
+}
+
+@media (min-width: 800px) {
+  body {
+    grid-template:
+      "header header" 70px
+      "aside main" auto /
+      200px auto;
+  }
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
